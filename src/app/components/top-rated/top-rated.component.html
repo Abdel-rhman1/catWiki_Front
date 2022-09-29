@@ -1,0 +1,30 @@
+<div class="container">
+    <app-navbar></app-navbar>
+
+    <div class="content">
+        <div class="header">
+            <h2>
+                Top 10 most searched breeds
+            </h2>
+        </div>
+
+        <div *ngFor="let breed of Populared_List ; let i=index">
+            <div class="row">
+                <div class="my-2 col-sm-12 col-md-3 mt-2">
+                    <img [src]="breed[0]['url']" alt="" class="Popualr_breed_imag">
+                </div>
+                <div class="items_content col-sm-12 col-md-9 mt-2">
+                    <h4 class="breed_name w-100">
+                        {{i+1}} . {{breed[0]['breeds']['0']['name']}}
+                    </h4>
+
+                    <p class="beerd_desc">
+                        {{breed[0]['breeds']['0']['description']}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+</div>

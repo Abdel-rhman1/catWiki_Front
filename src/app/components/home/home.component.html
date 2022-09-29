@@ -1,0 +1,148 @@
+
+
+<section class="container">
+    <app-navbar></app-navbar>
+
+    <div class="home">
+    <img src="../../../assets/images/HeroImagelg.png" class="w-100">    
+        <div class="content">
+            <h2 class="header">
+                catWiki
+            </h2>
+            <p class="home_des">
+                Get To know more about your cat bread
+            </p>
+    
+
+            <!-- <mat-form-field>
+                <mat-select  placeholder="Bank" #singleSelect>
+                  <mat-option>
+                    <ngx-mat-select-search ></ngx-mat-select-search>
+                  </mat-option>
+                  <mat-option *ngFor="let bank of breedList" [value]="bank['id']">
+                    {{bank.name}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+           -->
+           <ng-select (change)="getBreedDetails($event)" [(ngModel)]="selectedbreed">
+            <ng-option *ngFor="let car of breedList" [value]="car.id">{{car.name}}</ng-option>
+         </ng-select>
+           <!-- <input list="menace" name="menace">
+
+          
+              <datalist id="menace" class="form-control ">
+                <option *ngFor="let menace of breedList">{{menace.nom}} </option>
+           </datalist> -->
+        <!-- <select class="form-control ">
+            <option *ngFor="let breed of breedList" value="{{breed['id']}}">
+                {{breed['name']}}
+            </option>
+        </select> -->
+    </div>    
+        </div>
+   
+
+
+    <div class="second-section p-5">
+        <div class="content">
+            <h2 class="mb-0">
+                Most Searched Breeds
+            </h2>
+            <span class="break_line"></span>
+
+
+            <p class="discavor">
+                66+ Breeds For You TO Discoved
+            </p>
+            <a class="d-flex justify-content-end see_more" routerLink="/popualr_breeds">
+                See More 
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="item">
+                        <img class="w-100" [src]="breedList[0]['image']['url']">
+                        <p class="">
+                            {{breedList[0]['name']}}
+                        </p>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="item">
+                        <img class="w-100" [src]="breedList[1]['image']['url']">
+                        <p class="">
+                            {{breedList[1]['name']}}
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="item">
+                        <img class="w-100" [src]="breedList[2]['image']['url']">
+                        <p class="">
+                            {{breedList[2]['name']}}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="item">
+                        <img class="w-100" [src]="breedList[3]['image']['url']">
+                        <p class="">
+                            {{breedList[3]['name']}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="third_section p-5">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <span class="break_line"></span>
+        <p class="discavor">
+            why should you have a cat
+        </p>
+        <p>
+            Having a cat around you can actually trigger the release of calming chemicals in your body which lower your stress and anxiety leves
+        </p>
+
+        <span class="read_more">
+            Read More
+        </span>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="ImgItem">
+                            <img class="w-100" src="../../../assets/images/image 2.png">
+                        </div>
+                        <div class="ImgItem mt-4">
+                            <img class="w-100" src="../../../assets/images/image 1.png">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="ImgItem">
+                            <img class="w-100" src="../../../assets/images/image 3.png">
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        
+
+    </div>
+
+    <app-footer></app-footer>
+</section>
+

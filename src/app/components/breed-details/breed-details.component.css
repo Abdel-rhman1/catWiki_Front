@@ -1,0 +1,76 @@
+.catImage{
+    width: 371.04px;
+height: 371.04px;
+left: 148.96px;
+top: 109px;
+
+border-radius: 24px;
+}
+.cat_name{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 44px;
+}
+
+.cat_description{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+
+color: #291507;
+}
+.fill_bar{
+    width: 60px;
+    height: 12px;
+    left: 150px;
+    /* top: 459.75px; */
+    background: #544439;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-left:15px;
+}
+.empty{
+    width: 60px;
+height: 12px;
+left: 881.49px;
+top: 615.75px;
+display: flex;
+align-items: center;
+margin-left:15px;
+background: #E0E0E0;
+border-radius: 8px;
+}
+.cat_adaptability{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.cat_adaptability div{
+    display: flex;
+    /* justify-content: space-around; */
+}
+.other_photos_section h3{
+    width: 248px;
+height: 44px;
+left: 96px;
+top: 919.96px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 44px;
+color: #291507;
+}
+.extraCatImage{
+    width: 278px;
+height: 278px;
+left: 96px;
+top: 1003.96px;
+border-radius: 24px;
+}

@@ -1,0 +1,180 @@
+<section class="container">
+    <app-navbar></app-navbar>
+    <div class="row p-4">
+        <div  class="col-sm-12 col-md-6">
+            <img [src]="image" class="w-100 catImage" [alt]="">
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="data">
+                <p class="cat_name">
+                    {{beerdDetails['name']}}
+                </p>
+
+                <p class="cat_description"> 
+                    {{beerdDetails['description']}}
+                </p>
+                <p class="cat_temperament">
+                    Temperament: {{beerdDetails['temperament']}}
+                </p>
+
+                <p class="cat_origin">
+                    Origin: {{beerdDetails['origin']}}
+                </p>
+                <p class="cat_life_span">
+                    Life Span: {{beerdDetails['life_span']}}
+                </p>
+
+                <div class="cat_adaptability" style="position: relative;">
+                    <p>Adaptability:</p>
+                    
+                    <div>
+
+                    <div *ngFor="let item of array" 
+                        >
+                        <span class="fill_bar" *ngIf="beerdDetails['Adaptability']>=item"></span>
+                        <span class="empty" *ngIf="beerdDetails['Adaptability']<item"></span>
+
+                    </div>
+                    <!-- <span class="fill_bar" *ngFor="let item of [].constructor(beerdDetails['Adaptability'])">
+
+                    </span>                 -->
+                    </div>
+                </div>
+                <div class="cat_adaptability" style="position: relative">
+                    <p>Affection level:</p>
+                    <div>
+
+
+
+                        <div *ngFor="let item of array"
+                        >
+                        <span class="fill_bar" *ngIf="beerdDetails['affection_level']>=item"></span>
+                        <span class="empty" *ngIf="beerdDetails['affection_level']<item"></span>
+
+                    </div>
+                    <!-- <span class="fill_bar" *ngFor="let item of [].constructor(beerdDetails['affection_level'])">
+
+                    </span> -->
+                </div>
+                </div>
+
+                <div class="cat_adaptability" style="position: relative">
+                <p>Child Friendly:</p>
+                    <div>
+
+
+                        <div *ngFor="let item of array" 
+                        >
+                        <span class="fill_bar" *ngIf="beerdDetails['child_friendly']>=item"></span>
+                        <span class="empty" *ngIf="beerdDetails['child_friendly']<item"></span>
+
+                    </div>
+                    <!-- <span class="fill_bar" *ngFor="let item of [].constructor(beerdDetails['child_friendly'])">
+
+                    </span> -->
+                </div>
+            </div>
+
+                <div class="cat_adaptability" style="position: relative">
+                    <p>Grooming:</p>
+                    
+                    <div>
+
+
+                        <div *ngFor="let item of array"
+                        >
+                        <span class="fill_bar" *ngIf="beerdDetails['grooming']>=item"></span>
+                        <span class="empty" *ngIf="beerdDetails['grooming']<item"></span>
+
+                    </div>
+                </div>
+                </div>
+
+
+                <div class="cat_adaptability" style="position: relative">
+                    <p>Intelligence:</p>
+                    <div>
+
+                        <div *ngFor="let item of array"
+                        >
+                        <span class="fill_bar" *ngIf="beerdDetails['intelligence']>=item"></span>
+                        <span class="empty" *ngIf="beerdDetails['intelligence']<item"></span>
+
+                    </div>
+                   
+                    
+                </div>
+                </div>
+
+                <div class="cat_adaptability" style="position: relative">
+                    <p>Health issues:</p>
+                <div>
+
+
+                    <div *ngFor="let item of array" 
+                    >
+                    <span class="fill_bar" *ngIf="beerdDetails['health_issues']>=item"></span>
+                    <span class="empty" *ngIf="beerdDetails['health_issues']<item"></span>
+
+                </div>
+
+
+                    <!-- <span class="fill_bar" *ngFor="let item of [].constructor(beerdDetails['health_issues'])">
+
+                    </span> -->
+                    </div>
+                </div>
+
+                <div class="cat_adaptability" style="position: relative">
+                    
+                    <p>Social needs:</p>
+                    <div>
+                        <div *ngFor="let item of array" 
+                        >
+                        <span class="fill_bar" [style.display]="beerdDetails['social_needs']>=item?'block':'none'" *ngIf="beerdDetails['social_needs']>=item"></span>
+                        <span class="empty" *ngIf="beerdDetails['social_needs']<item"></span>
+    
+                    </div>
+                    <!-- <span class="fill_bar" *ngFor="let item of [].constructor(beerdDetails['social_needs'])">
+                        
+                    </span> -->
+                </div>
+                </div>
+
+
+                <div class="cat_adaptability" style="position: relative">
+                    <p>Stranger friendly:</p>
+                    <div>
+
+                        <div *ngFor="let item of array" 
+                        >
+                        <span class="fill_bar" [style.display]="beerdDetails['stranger_friendly']>=item?'block':'none'" *ngIf="beerdDetails['social_needs']>=item"></span>
+                        <span class="empty" *ngIf="beerdDetails['stranger_friendly']<item"></span>
+    
+                    </div>
+                    <!-- <span class="fill_bar" *ngFor="let item of [].constructor(beerdDetails['stranger_friendly'])">
+                        
+                    </span> -->
+                </div>
+            </div>
+              
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="other_photos_section p-5">
+        <h3>
+            Other Photos
+        </h3>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-3 mt-4" *ngFor="let image of extraImages">
+                <img  [src]="image[0]['url']" class="w-100 extraCatImage" alt="" >
+            </div>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+</section>
