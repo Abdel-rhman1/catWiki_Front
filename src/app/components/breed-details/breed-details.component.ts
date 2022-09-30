@@ -18,7 +18,6 @@ export class BreedDetailsComponent implements OnInit {
   ngOnInit(): void {
     this._activatedRouter.params.subscribe(params => {
       this.id = params['id'];
-      alert(this.id);
       this._beerdService.parms.userData.beerd_id = this.id;
       this.getBeerdDetails();
       this.getMoreImages();
